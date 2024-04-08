@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+    
+
+<link rel="stylesheet" href="{% static 'style.css' %}"> 
+
+    <h1>Create a user account.</h1>
+
+    <h2>Please note to the text next to the form fields.</h2>
+
+    <form method="=POST" autocomplete="off">
+
+        {% csrf_token %}
+
+        {{registerform.as_p}}
+
+        <input type="submit" value="Register"/>
+
+
+
+    </form>
+
+    <a href="{% url '' %}">Home</a>
+
+    <br> <br>
+
+   <a href="{% url 'my_login' %}">Login</a>
+
+
+
+</html>
